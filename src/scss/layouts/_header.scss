@@ -1,0 +1,33 @@
+.header{
+  background-image: url("../../img/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  
+  li{
+    padding-right: 10px;
+    
+  }
+  &__topbar{
+    height: 40px;
+    
+    text-transform: uppercase;
+    color: $text-header;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 10px;
+    //letter-spacing: .8px;
+    //font-weight: 300;
+    //justify-content: center;
+    //align-items: center;
+    li:nth-child(4) {
+        color: $white;
+    }
+    li:nth-child(5) {
+        color: $accent;
+        
+    }
+  }
+}
+
+
+

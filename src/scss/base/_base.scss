@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+  }
+  
+body{
+background-color: $white;
+}
+
+.container-full{
+  width: 100%;
+}
+
+.container{
+  margin: 0 190px;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  display: inline-block;
+  padding-right: 10px;
+}
+

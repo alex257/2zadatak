@@ -1,0 +1,15 @@
+
+[class*='col-']{
+  float: left;
+  padding-right: $spacing;
+    
+  &:not(:last-of-type) {
+    padding-right: $spacing;
+  }
+}
+  
+.row{
+    overflow: auto;
+  }
+
+ 
