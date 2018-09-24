@@ -4,6 +4,7 @@
   
 body{
 background-color: $white;
+overflow-x: visible;
 }
 
 .container-full{
@@ -24,4 +25,8 @@ li{
   display: inline-block;
   padding-right: 10px;
 }
+
+//img{
+  //width: 100%;
+//}
 

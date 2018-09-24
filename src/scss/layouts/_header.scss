@@ -1,33 +1,152 @@
-.header{
-  background-image: url("../../img/header.jpg");
+.header {
+  background: url("../../img/jumbotron.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  max-width: 1600px;
+  height: auto;
 
-  
-  li{
-    padding-right: 10px;
-    
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 210px;
+    background: url("../../img/header-logo.jpg");
+    height: 112px;
+    width: 171px;
   }
-  &__topbar{
-    height: 40px;
-    
+
+  li {
+    padding-right: 10px;
+  }
+
+  &__topbar {
+    height: 42px;
     text-transform: uppercase;
     color: $text-header;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 10px;
-    //letter-spacing: .8px;
-    //font-weight: 300;
-    //justify-content: center;
-    //align-items: center;
+
     li:nth-child(4) {
-        color: $white;
+      color: $white;
     }
     li:nth-child(5) {
-        color: $accent;
-        
+      color: $accent;
+    }
+  }
+  &__nav {
+    height: 69px;
+    overflow-y: hidden;
+    ul {
+      li {
+        font-size: 14px;
+        padding: 26px 55px 26px 0;
+        font-weight: $font-bold;
+        font-family: "Montserrat", sans-serif;
+        &:first-of-type {
+          padding-left: 20px;
+        }
+        &:last-of-type {
+          padding-right: 30px;
+        }
+      }
+      .li__search-icon {
+        padding-right: 40px;
+      }
+
+      i {
+        font-size: 20px;
+      }
+
+      i.fa-shopping-cart {
+        position: relative;
+        display: flex;
+        &:after {
+          content: "3";
+          display: block;
+          position: absolute;
+          top: -10px;
+          right: -15px;
+          width: 20px;
+          height: 20px;
+          font-family: "Open Sans", sans-serif;
+          background-color: $accent;
+          border-radius: 50%;
+          color: $white;
+          font-size: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .jumbotron {
+    color: $white;
+    font-family: Montserrat, sans-serif;
+
+    &__logo-puma {
+      position: relative;
+      padding-top: 100px;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $accent;
+        width: 80px;
+        height: 3px;
+        left: 748px;
+        margin-top: 30px;
+      }
+    }
+
+    h1 {
+      font-size: 55px;
+      font-weight: 800;
+      margin-top: 130px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 300;
+      margin-top: 17px;
+      color: $text-subtitle;
+    }
+
+    &__button {
+      background: transparent;
+      color: $white;
+      border: 2px solid $white;
+      padding: 18px 0px 18px 30px;
+      font-weight: 800;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-top: 90px;
+      margin-bottom: 110px;
+    }
+
+    &__chevron {
+      margin-left: 16px;
+      margin-right: 18px;
+    }
+
+    &__dots {
+      margin-top: 106px;
+      margin-bottom: 64px;
+      span {
+        background-color: $text-subtitle;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        margin-left: 13px;
+      }
+      span.active {
+        box-shadow: 0px 0px 5px 3px $white;
+        background-color: $white;
+      }
     }
   }
 }
-
-
-

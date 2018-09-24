@@ -71,4 +71,11 @@ gulp.task('scripts', ['js'], function(){
          .pipe(gulp.dest('dist'));
  });
 
-gulp.task('default', ['sass','js','serve','minify-css','scripts','copyHtml']);
+ // Copy img files
+ gulp.task('copyImg', function(){
+    gulp.src('src/img/**/*.{gif,jpg,png,svg}')
+        .pipe(gulp.dest('dist/img'));
+});
+
+
+gulp.task('default', ['sass','js','serve','minify-css','scripts','copyHtml','copyImg']);
