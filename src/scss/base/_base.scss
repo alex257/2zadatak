@@ -1,32 +1,37 @@
 * {
-    box-sizing: border-box;
-  }
-  
-body{
-background-color: $white;
-overflow-x: visible;
+  box-sizing: border-box;
 }
 
-.container-full{
+body {
+  background-color: $white;
+  overflow-x: visible;
+}
+
+.container-full {
   width: 100%;
 }
 
-.container{
+.container {
   margin: 0 190px;
 }
 
-ul{
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li{
+li {
   display: inline-block;
   padding-right: 10px;
 }
 
-//img{
-  //width: 100%;
-//}
+img{
+ //max-width: 100%;
+ //display: block;
+ //height: auto;
+}
 
+a{
+  text-decoration: none;
+}

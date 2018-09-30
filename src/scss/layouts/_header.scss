@@ -116,15 +116,12 @@
     }
 
     &__button {
-      background: transparent;
       color: $white;
       border: 2px solid $white;
-      padding: 18px 0px 18px 30px;
-      font-weight: 800;
-      font-size: 11px;
-      text-transform: uppercase;
       margin-top: 90px;
       margin-bottom: 110px;
+      font-weight: 800;
+      padding: 18px 0px 18px 30px;
     }
 
     &__chevron {
@@ -134,7 +131,7 @@
 
     &__dots {
       margin-top: 106px;
-      margin-bottom: 64px;
+      margin-bottom: 102px;
       span {
         background-color: $text-subtitle;
         border-radius: 50%;

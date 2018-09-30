@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans|Montserrat:400,700,700i,800,800i|Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Montserrat:400,600,700,700i,800,800i|Open+Sans");
 
-@import 'vendors/normalize';
+@import "vendors/normalize";
 @include normalize();
-
 
 @import "abstracts/variables";
 @import "abstracts/mixins";
@@ -14,10 +13,4 @@
 @import "layouts/grid";
 @import "layouts/header";
 @import "layouts/footer";
-
-
-
-
-
-
-
+@import "layouts/blog";
