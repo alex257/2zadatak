@@ -27,14 +27,17 @@
     color: $text-header;
     font-family: "PT Sans", sans-serif;
     font-size: 10px;
-
-    li:nth-child(4) {
-      color: $white;
+    a {
+      &:nth-child(4) {
+        color: $white;
+      }
     }
-    li:nth-child(5) {
+    i {
       color: $accent;
+      //margin-top: -10px;
     }
   }
+
   &__nav {
     height: 69px;
     overflow-y: hidden;
@@ -54,7 +57,9 @@
       .li__search-icon {
         padding-right: 40px;
       }
-
+      a {
+        color: $black;
+      }
       i {
         font-size: 20px;
       }
@@ -86,6 +91,7 @@
   .jumbotron {
     color: $white;
     font-family: Montserrat, sans-serif;
+    position: relative;
 
     &__logo-puma {
       position: relative;
@@ -103,23 +109,26 @@
     }
 
     h1 {
-      font-size: 55px;
-      font-weight: 800;
-      margin-top: 130px;
+      font-size: 80px;
+      font-weight: 700;
+      margin-top: 153px;
+      //margin-bottom: 1px;
+      letter-spacing: -3px;
     }
 
     h4 {
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 300;
-      margin-top: 17px;
+      margin-top: -38px;
       color: $text-subtitle;
+      letter-spacing: -1px;
     }
 
     &__button {
       color: $white;
       border: 2px solid $white;
-      margin-top: 90px;
-      margin-bottom: 110px;
+      margin-top: 63px;
+      margin-bottom: 105px;
       font-weight: 800;
       padding: 18px 0px 18px 30px;
     }
@@ -130,8 +139,9 @@
     }
 
     &__dots {
-      margin-top: 106px;
       margin-bottom: 102px;
+      //position: relative;
+      
       span {
         background-color: $text-subtitle;
         border-radius: 50%;

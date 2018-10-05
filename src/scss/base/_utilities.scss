@@ -95,6 +95,11 @@
   visibility: hidden;
 }
 
+//Display
+.display-none{
+  display: none;
+}
+
 //Align
 .text-align-center {
   text-align: center;
@@ -103,4 +108,8 @@
 //Text
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-white {
+  color: $white;
 }

@@ -26,11 +26,17 @@
               <div class="col-lg-6 d-flex justify-content-end">
                 <nav>
                   <ul>
-                    <li>Shipping policy</li>
-                    <li>Find store</li>
-                    <li>Wishlist(0)</li>
-                    <li>Math Thompson</li>
-                    <li><i class="fas fa-caret-down"></i></li>
+                    <li><a href="#">Shipping policy</a></li>
+                    <li><a href="#">Find store</a></li>
+                    <li><a href="#">Wishlist(0)</a></li>
+                    <li><a href="#" class="text-white">Math Thompson</a></li>
+                    <li><a href="#"><i class="fas fa-caret-down">
+                          <ul class="display-none">
+                            <li>A</li>
+                            <li>B</li>
+                            <li>C</li>
+                          </ul>
+                        </i></a></li>
                   </ul>
                 </nav>
               </div>
@@ -46,23 +52,22 @@
               <div class="col-lg-7">
                 <nav>
                   <ul>
-                    <li>New</li>
-                    <li>Men</li>
-                    <li>Woman</li>
-                    <li>Sale</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Woman</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
                   </ul>
                 </nav>
               </div>
               <div class="col-lg-3 d-flex justify-content-end">
                 <ul>
-                  <li class="li__search-icon"><i class="fas fa-search"></i></li>
-                  <li><i class="fas fa-shopping-cart"></i></li>
+                  <li class="li__search-icon"><a href="#"><i class="fas fa-search"></i></a></li>
+                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -72,8 +77,8 @@
           <div class="jumbotron__logo-puma"><img src="img/puma-logo.png" alt="puma-logo"></div>
           <h1>Puma Triple Black Pack</h1>
           <h4>PUMA's Disc Blaze and Blaze of Glory sneackers get a reworking.</h4>
-          <button type="button" class="jumbotron__button">Find out more<i class="fas fa-chevron-right jumbotron__chevron"></i>
-          </button>
+          <a href="#"><button type="button" class="jumbotron__button">Find out more<i class="fas fa-chevron-right jumbotron__chevron"></i>
+            </button></a>
           <div class="jumbotron__dots">
             <span></span>
             <span class="active"></span>
@@ -91,8 +96,22 @@
   <section id="blog" class="blog container-full">
     <div class="container">
       <div class="row blog__row--promo d-flex">
-        <div class="col-lg-6"><img src="img/promo1.jpg" class="blog__promo-img--first" alt="nixon perimeter"></div>
-        <div class="col-lg-6"><h1 class="blog__h1--promo">Sweetest<br>Pack of<br>Air Maxes</h1><img src="img/promo2.jpg" class="blog__promo-img--second" alt="sweetest pack"></div>
+        <div class="blog__card--promo col-lg-6">
+          <h1 class="blog__h1--promo-first">Nixon<br>Perimeter<br>Collection</h1><img src="img/promo1.jpg" class="blog__promo-img--first"
+            alt="nixon perimeter">
+          <div class="blog__card-links d-flex">
+            <h5>Shop collection</h5><i class="fas fa-chevron-right"><a href="#"></a></i>
+            <h5>All watches</h5><i class="fas fa-chevron-right"><a href="#"></a></i>
+          </div>
+        </div>
+        <div class="blog__card--promo col-lg-6">
+          <h1 class="blog__h1--promo-second">Sweetest<br>Pack of<br>Air Maxes</h1><img src="img/promo2.jpg" class="blog__promo-img--second"
+            alt="sweetest pack">
+          <div class="blog__card-links d-flex">
+            <h5>View the pack</h5>
+            <i class="fas fa-chevron-right"><a href="#"></a></i>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container blog__container--second text-align-center">
@@ -135,9 +154,10 @@
             <div class="gallery__img--small gallery__img--caret col-lg-3"><a href="#"><img src="img/gallery4.jpg" alt=""></a></div>
           </div>
           <div class="d-flex flex-row">
-            <div class="gallery__img--small gallery__img--caret-left col-lg-3"><a href="#"><img src="img/gallery5.jpg" alt=""></a></div>
+            <div class="gallery__img--small gallery__img--caret-left col-lg-3"><a href="#"><img src="img/gallery5.jpg"
+                  alt=""></a></div>
             <div class="gallery__img--text col-lg-3"> <a href="#">
-              <p>Puma X BWGH August<br>Releases</p><a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                <p>Puma X BWGH August<br>Releases</p><a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
             </div>
           </div>
         </div>
@@ -156,7 +176,8 @@
             <div class="gallery__img--small gallery__img--caret col-lg-3"><a href="#"><img src="img/gallery8.jpg" alt=""></a></div>
           </div>
           <div class="d-flex flex-row">
-            <div class="gallery__img--small gallery__img--caret-left col-lg-3"><a href="#"><img src="img/gallery9.jpg" alt=""></a></div>
+            <div class="gallery__img--small gallery__img--caret-left col-lg-3"><a href="#"><img src="img/gallery9.jpg"
+                  alt=""></a></div>
             <div class="gallery__img--text col-lg-3"><a href="#">
                 <p>Adidas Original<br>Stan Smith OG</p><i class="fas fa-long-arrow-alt-right"></i>
               </a>
@@ -176,7 +197,8 @@
             <div class="gallery__img--small gallery__img--caret col-lg-3"><a href="#"><img src="img/gallery10.jpg" alt=""></a></div>
           </div>
           <div class="d-flex flex-row">
-            <div class="gallery__img--small gallery__img--caret-left col-lg-3"><a href="#"><img src="img/gallery11.jpg" alt=""></a></div>
+            <div class="gallery__img--small gallery__img--caret-left col-lg-3"><a href="#"><img src="img/gallery11.jpg"
+                  alt=""></a></div>
             <div class="gallery__img--text col-lg-3"><a href="#">
                 <p>Puma X BWGH August<br>Releases</p><i class="fas fa-long-arrow-alt-right"></i>
               </a>
@@ -189,7 +211,7 @@
     <!-- End of gallery-->
     <div class="container text-align-center">
       <div class="row">
-        <button type="button">Read more</button>
+        <a href="#"><button type="button">Read more</button></a>
       </div>
     </div>
   </section>
@@ -223,11 +245,11 @@
         <div class="row">
           <div class="col-lg-5">
             <ul class="ul--first d-flex justify-content-around">
-              <li>Online Store</li>
-              <li class="active">How to Order</li>
-              <li>Blog</li>
-              <li>My Account</li>
-              <li>Contact</li>
+              <li><a href="#">Online Store</a></li>
+              <li class="active"><a href="#">How to Order</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
           <div class="col-lg-2">
@@ -252,11 +274,11 @@
           </div>
           <div class="col-lg-5">
             <ul class="ul--second d-flex justify-content-between">
-              <li>Shipping Policy</li>
-              <li>Terms</li>
-              <li>FAQ's</li>
-              <li>Privacy</li>
-              <li>Site Security</li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">FAQ's</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Site Security</a></li>
             </ul>
           </div>
         </div>
