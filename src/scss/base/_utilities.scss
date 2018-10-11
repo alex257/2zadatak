@@ -51,14 +51,6 @@
   align-items: center;
 }
 
-//.align-items-baseline {
-//align-items: baseline;
-//}
-
-//.align-items-stretch {
-//align-items: stretch;
-//}
-
 //Background
 
 .bg-dark {
@@ -70,9 +62,11 @@
 }
 
 //Padding
+
 .pl-20 {
   padding-left: 20px;
 }
+
 .pl-10 {
   padding-left: -10px;
 }
@@ -82,6 +76,7 @@
 }
 
 //Margin
+
 .ml-10 {
   margin-left: -10px;
 }
@@ -91,21 +86,25 @@
 }
 
 //Visibility
+
 .v-hidden {
   visibility: hidden;
 }
 
 //Display
-.display-none{
+
+.display-none {
   display: none;
 }
 
 //Align
+
 .text-align-center {
   text-align: center;
 }
 
 //Text
+
 .uppercase {
   text-transform: uppercase;
 }

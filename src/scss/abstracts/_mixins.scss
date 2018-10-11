@@ -1,13 +1,13 @@
 @mixin grid($size, $breakpoint) {
-    @media (min-width: $breakpoint) {
-      @for $i from 1 through $columns {
-        .col-#{$size}-#{$i} {
-          width: (100% / $columns) * $i;
-        }
+  @media (min-width: $breakpoint) {
+    @for $i from 1 through $columns {
+      .col-#{$size}-#{$i} {
+        width: (100% / $columns) * $i;
       }
     }
   }
+}
 
-@include grid('sm', 544px);
-@include grid('md', 768px);
-@include grid('lg', 1200px);
+@include grid("sm", 544px);
+@include grid("md", 768px);
+@include grid("lg", 1200px);
