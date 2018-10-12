@@ -1,5 +1,15 @@
 button {
   background: transparent;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
+  &:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+  }
+  &:hover{
+      //color: #9555af;
+      border-color: $button-text;
+      //background-color: white;
+}
 }

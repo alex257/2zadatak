@@ -7,18 +7,31 @@
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 700;
-    margin-bottom: 17px;
     letter-spacing: -2px;
+    margin-bottom: 17px;
   }
 
   p {
-    font-size: 20px;
-    color: $text-subtitle;
+    font-size: 15.5px;
+    font-weight: $font-semibold;
+    color: $blog-subtitle;
     margin-bottom: 90px;
   }
-}
+
+  &__button{
+      margin-top: 76px;
+      margin-bottom: 70px;
+      background: transparent;
+      color: $button-text;
+      border: 2px solid $text-subtitle;
+      padding: 18px 48px 18px 48px;
+      font-weight: 600;
+    }
+    
+  }
+
 
 .gallery {
   .row {
@@ -145,12 +158,3 @@
   }
 }
 
-button {
-  margin-top: 76px;
-  margin-bottom: 70px;
-  background: transparent;
-  color: $black;
-  border: 1px solid $text-subtitle;
-  padding: 18px 48px 18px 48px;
-  font-weight: 800;
-}

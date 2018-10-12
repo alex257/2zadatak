@@ -119,11 +119,12 @@
         content: "";
         display: block;
         position: absolute;
-        background-color: $accent;
-        width: 80px;
-        height: 3px;
+        bottom: -35px;
         left: 748px;
-        margin-top: 30px;
+        background-color: $accent;
+        width: 70px;
+        height: 3px;
+        text-align: center;
       }
     }
 
@@ -145,10 +146,9 @@
     &__button {
       color: $white;
       border: 2px solid $white;
-      font-weight: 800;
+      font-weight: 700;
       margin-top: 63px;
       margin-bottom: 105px;
-
       padding: 18px 0px 18px 30px;
     }
 

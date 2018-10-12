@@ -76,11 +76,12 @@
       </div>
       <div id="jumbotron" class="jumbotron container-full">
         <div class="row text-align-center">
-          <div class="jumbotron__logo-puma"><img src="img/puma-logo.png" alt="puma-logo"></div>
+          <div class="jumbotron__logo-puma d-flex justify-content-center align-items-center">
+            <img src="img/puma-logo.png" alt="puma-logo"></div>
           <h1>Puma Triple Black Pack</h1>
           <h4>PUMA's Disc Blaze and Blaze of Glory sneackers get a reworking.</h4>
-          <a href="#"><button type="button" class="jumbotron__button">Find out more<i class="fas fa-chevron-right jumbotron__chevron"></i>
-            </button></a>
+          <button type="button" class="jumbotron__button">Find out more<i class="fas fa-chevron-right jumbotron__chevron"></i>
+            </button>
           <div class="jumbotron__dots">
             <span></span>
             <span class="active"></span>
@@ -107,8 +108,14 @@
               <h1 class="promo__h1--first">Nixon<br>Perimeter<br>Collection.</h1>
             </div>
             <div class="promo__card-links d-flex">
-              <h5>Shop collection</h5><i class="fas fa-chevron-right"><a href="#"></a></i>
-              <h5>All watches</h5><i class="fas fa-chevron-right"><a href="#"></a></i>
+              <a href="#">
+                <h5>Shop collection</h5>
+              </a>
+              <a href="#"><i class="fas fa-chevron-right"></i></a>
+              <a href="#">
+                <h5>All watches</h5>
+              </a>
+              <a href="#"><i class="fas fa-chevron-right"></i></a>
             </div>
           </div>
           <div class="promo__img--second col-lg-6">
@@ -117,8 +124,10 @@
               <h1 class="promo__h1--second">Sweetest<br>Pack of<br>Air&nbsp;Maxes</h1>
             </div>
             <div class="promo__card-links d-flex">
-              <h5>View the pack</h5>
-              <i class="fas fa-chevron-right"><a href="#"></a></i>
+              <a href="#">
+                <h5>View the pack</h5>
+              </a>
+              <a href="#"><i class="fas fa-chevron-right"></i></a>
             </div>
           </div>
         </div>
@@ -131,7 +140,7 @@
 
     <div class="container blog__container--second text-align-center">
       <h2>From the Blog</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipscing elit, sed do</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
     </div>
 
     <!-- Blog gallery -->
@@ -223,7 +232,7 @@
     <!-- End of gallery-->
     <div class="container text-align-center">
       <div class="row">
-        <a href="#"><button type="button">Read more</button></a>
+        <button type="button" class="blog__button">Read more</button>
       </div>
     </div>
   </section>
