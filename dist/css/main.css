@@ -621,15 +621,9 @@ a {
 
 button {
   background: transparent;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 11px;
   text-transform: uppercase; }
-
-button:active {
-  -webkit-transform: translateY(1px);
-  transform: translateY(1px);
-  -webkit-filter: saturate(150%);
-  filter: saturate(150%); }
 
 button:hover {
   border-color: #595959; }
