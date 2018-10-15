@@ -150,6 +150,10 @@
       margin-top: 63px;
       margin-bottom: 105px;
       padding: 18px 0px 18px 30px;
+      transition: border 0.4s;
+      &:hover {
+        border: 2px solid rgba($text-header, 0.1);
+      }
     }
 
     &__chevron {

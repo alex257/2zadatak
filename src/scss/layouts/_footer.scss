@@ -72,6 +72,7 @@
           display: block;
           color: $white;
           position: relative;
+          transition: background-color .5s;
           &:hover {
             &:after {
               content: "";
@@ -101,6 +102,11 @@
       border-radius: 50%;
       margin: 0 15px 49px 8px;
       text-align: center;
+      transition: transform 0.2s, color 0.3s;
+      &:hover {
+        transform: scale(1.2);
+        color: rgba($text-footer, 0.6);
+      }
     }
 
     i {
