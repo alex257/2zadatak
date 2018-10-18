@@ -16,20 +16,20 @@
       <div class="header__navigation">
         <div class="container-full bg-dark">
           <div class="container">
-            <div class="row header__topbar d-flex justify-content-center align-items-center">
-              <div class="col-lg-2">
+            <div class="header__topbar row d-flex justify-content-center align-items-center">
+              <div class="col-sm-2">
                 <p class="v-hidden">logo</p>
               </div>
-              <div class="col-lg-4 pl-20">
-                <p>International online sneaker and street wear shop</p>
+              <div class="col-sm-4">
+                <p class="d-sm-none">International&nbsp;online&nbsp;sneaker&nbsp;and&nbsp;street&nbsp;wear&nbsp;shop</p>
               </div>
-              <div class="col-lg-6 d-flex justify-content-end">
+              <div class="col-sm-6 col-xs-10 d-flex justify-content-end">
                 <nav>
                   <ul>
                     <li><a href="#">Shipping policy</a></li>
                     <li><a href="#">Find store</a></li>
                     <li><a href="#">Wishlist(0)</a></li>
-                    <li><a href="#" class="text-white">Math Thompson</a>
+                    <li><a href="#" class="active">Math Thompson</a>
                       <a href="#"><i class="fas fa-caret-down">
                           <ul class="display-none">
                             <li>A</li>
@@ -46,10 +46,10 @@
         <div class="container-full bg-light">
           <div class="container">
             <div class="header__nav row">
-              <div class="col-lg-2">
+              <div class="col-md-2 col-sm-2 col-xs-2">
                 <p class="v-hidden">logo</p>
               </div>
-              <div class="col-lg-7">
+              <div class="d-md-none col-lg-7">
                 <nav>
                   <ul>
                     <li><a href="#">New</a></li>
@@ -61,11 +61,28 @@
                   </ul>
                 </nav>
               </div>
-              <div class="col-lg-3 d-flex justify-content-end">
+              <div id="header__mobile-nav" class="header__mobile-nav display-none">
+                <nav>
+                  <ul>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Woman</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-lg-3 col-sm-9 col-xs-8 d-flex justify-content-end">
                 <ul>
                   <li class="li__search-icon"><a href="#"><i class="fas fa-search"></i></a></li>
                   <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
+              </div>
+              <div class="header__hamburger col-sm-1 col-xs-2 d-md-none">
+                <div>
+                  <span></span>
+                </div>
               </div>
             </div>
           </div>
@@ -75,13 +92,20 @@
         <h1>Type to search</h1>
       </div>
       <div id="jumbotron" class="jumbotron container-full">
-        <div class="row text-align-center">
-          <div class="jumbotron__logo-puma d-flex justify-content-center align-items-center">
-            <img src="img/puma-logo.png" alt="puma-logo"></div>
-          <h1>Puma Triple Black Pack</h1>
-          <h4>PUMA's Disc Blaze and Blaze of Glory sneackers get a reworking.</h4>
-          <button type="button" class="jumbotron__button">Find out more<i class="fas fa-chevron-right jumbotron__chevron"></i>
-          </button>
+        <div class="row text-align-center d-flex flex-column justify-content-center align-items-center">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="jumbotron__logo-puma col-lg-12 d-flex justify-content-center align-items-center">
+              <img src="img/puma-logo.png" alt="puma-logo">
+            </div>
+          </div>
+          <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+            <h1>Puma Triple Black Pack</h1>
+            <h4>PUMA's Disc Blaze and Blaze of Glory sneackers get a reworking.</h4>
+          </div>
+          <div class="col-lg-12 d-flex justify-content-center align-items-center">
+            <button type="button" class="jumbotron__button">Find out more<i class="fas fa-chevron-right jumbotron__chevron"></i>
+            </button></div>
+
           <div class="jumbotron__dots">
             <span></span>
             <span class="active"></span>

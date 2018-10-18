@@ -93,6 +93,23 @@
 
 //Display
 
+.d-md-none {
+  @include mQ($md) {
+    display: none;
+  }
+}
+
+.d-sm-none {
+  @include mQ($sm) {
+    display: none;
+  }
+}
+
+.d-xs-none{
+  @include mQ($xs) {
+    display: none;
+  }
+}
 .display-none {
   display: none;
 }

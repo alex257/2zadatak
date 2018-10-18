@@ -4,10 +4,19 @@
       .col-#{$size}-#{$i} {
         width: (100% / $columns) * $i;
       }
+      .col-offset-#{$i} {
+        margin-left: (100% / $columns) * $i;
+      }
     }
   }
 }
+@include grid("xs", $xs);
+@include grid("sm", $sm);
+@include grid("md", $md);
+@include grid("lg", $lg);
 
-@include grid("sm", 544px);
-@include grid("md", 768px);
-@include grid("lg", 1200px);
+@mixin mQ($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
