@@ -105,7 +105,7 @@
   }
 }
 
-.d-xs-none{
+.d-xs-none {
   @include mQ($xs) {
     display: none;
   }

@@ -1,6 +1,12 @@
 .footer {
   background-color: $logos-bg;
   font-family: Montserrat, sans-serif;
+
+  &__container {
+    @include mQ($lg) {
+      margin: 0 0;
+    }
+  }
   &__logos {
     background-color: $logos-bg;
     padding-top: 82px;
@@ -18,6 +24,10 @@
       border-width: 0 30px 30px 30px;
       border-color: transparent transparent $accent-darker transparent;
       transform: translateX(-50%);
+      @include mQ($md) {
+        //bottom: -1%;
+        border-width: 0 20px 20px 20px;
+      }
     }
     &:after {
       content: "";
@@ -32,8 +42,14 @@
       border-color: transparent transparent $accent transparent;
       transform: translateX(-50%) rotate(180deg);
       z-index: 3;
+      @include mQ($lg) {
+        bottom: -12%;
+      }
+      @include mQ($md) {
+        bottom: -8%;
+        border-width: 0 20px 20px 20px;
+      }
     }
-
     .x {
       color: $text-subtitle;
       font-weight: 500;
@@ -43,6 +59,47 @@
 
   &__logo {
     padding: 68px 0px 54px 42px;
+    width: 100%;
+    display: inline-block;
+    //height: auto;
+    @include mQ($lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-left: 20px;
+    }
+  }
+
+  &__row {
+    @include mQ($lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div {
+      &:nth-child(2) {
+        @include mQ($lg) {
+          order: 1;
+        }
+      }
+      &:nth-child(3) {
+        @include mQ($lg) {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  &__social-links{
+    margin-left: 30px;
+    @include mQ($lg) {
+      margin-left: 50px;
+    }
+  }
+
+  &__copyright{
+    font-size: 10px;
+
   }
 
   &__links {
@@ -62,17 +119,28 @@
       top: -3%;
       transform: translateX(-50%);
       z-index: 11;
+      @include mQ($lg) {
+        top: -3.5%;
+      }
+      @include mQ($md) {
+        top: -2.5%;
+      }
     }
 
     ul {
       padding: 120px 0 110px 0;
-      font-weight: 600;
+      //font-weight: 600;
+      @include mQ($lg) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
       li {
+        font-weight: 600;
         a {
           display: block;
           color: $white;
           position: relative;
-          transition: background-color .5s;
+          transition: background-color 0.5s;
           &:hover {
             &:after {
               content: "";
@@ -88,10 +156,22 @@
         }
       }
     }
-
+    .ul--first {
+      padding: 120px 0 110px 0;
+      @include mQ($lg) {
+        padding-top: 80px;
+        padding-bottom: 25px;
+      }
+    }
     .ul--second {
-      padding-left: 65px;
+      padding: 120px 65px 110px 0;
       margin-right: -10px;
+      @include mQ($lg) {
+        padding-top: 0px;
+        padding-bottom: 40px;
+        //padding-left: 0;
+        margin-left: 20px;
+      }
     }
 
     .circle {
@@ -100,7 +180,7 @@
       line-height: 34px;
       border: 2px solid $text-footer;
       border-radius: 50%;
-      margin: 0 15px 49px 8px;
+      margin: 0 7px 49px 8px;
       text-align: center;
       transition: transform 0.2s, color 0.3s;
       &:hover {

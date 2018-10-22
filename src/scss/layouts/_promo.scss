@@ -1,16 +1,28 @@
 .promo {
   background-color: $blog-bg;
   font-family: Montserrat, sans-serif;
+  margin: 0 auto;
   overflow-y: hidden;
-  &__row {
-    margin: 0 11px 0 11px;
-  }
+
+  /*&__row {
+    margin: 0 11px;
+    justify-content: center;
+    align-items: center;
+  }*/
+
   &__card {
     width: 1180px;
-    height: 400px;
-    margin-top: -40px;
+    //height: 400px;
+    bottom: -475px;
     position: absolute;
-    z-index: 2;
+    @include mQ($md) {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    @include mQ($sm) {
+      overflow: auto;
+      flex-direction: column;
+    }
   }
 
   &__card-links {
@@ -21,41 +33,95 @@
       padding-left: 38px;
       text-transform: uppercase;
     }
-    h5 {
-      font-size: 12px;
-      padding-top: 19px;
-    }
+
     i {
       font-size: 11px;
-      padding: 41px 0px 0px 14px;
+      padding-left: 14px;
     }
+  }
+
+  &__h5--first {
+    padding-top: 0px;
+  }
+
+  &__h5--second {
+    padding-top: 19px;
+  }
+
+  &__fa--first {
+    padding-top: 22px;
+  }
+  &__fa--second {
+    padding-top: 41px;
   }
 
   &__img--first {
-    background: url(../../img/promo1.jpg);
+    background: url(../../img/promo1.jpg) no-repeat;
   }
 
   &__img--second {
-    background: url(../../img/promo2.jpg);
+    background: url(../../img/promo2.jpg) no-repeat;
   }
 
   &__img--first,
   &__img--second {
     position: relative;
+    //display: block;
+    //height: auto;
+    //max-width: 100%;
+    @include mQ($md) {
+      //width: 600px;
+      //height: auto;
+    }
   }
 
   &__border-wrapper {
+    width: 510px;
+    height: 265px;
+    margin: 50px 0px 0px 38px;
+    outline: 6px solid $white;
+    position: relative;
+  }
+
+  &__h1--first,
+  &__h1--first-2,
+  &__h1--second {
+    color: $white;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 105%;
+    padding-bottom: 10px;
+  }
+
+  &__h1--first-2 {
+    top: 56px;
+  }
+
+  &__h1--first {
+    background: $promo-orange;
+    padding-right: 11px;
+  }
+  &__h1--first-2 {
+    background: $promo-orange-2;
+  }
+
+  &__h1--second {
+    background: $promo-gray;
+    padding-right: 4px;
+  }
+
+  /*&__border-wrapper {
     width: 512px;
     height: 265px;
     margin: 50px 0px 0px 38px;
     position: relative;
-    //opacity: 0;
     border: 6px solid transparent;
     border: 6px solid $white;
     z-index: 4;
-    /* &:hover{
-      border: 6px solid $white;
-    }*/
   }
   &__h1-wrapper--first {
     background: $promo-orange;
@@ -87,5 +153,5 @@
     font-weight: 600;
     letter-spacing: -1px;
     line-height: 105%;
-  }
+  }*/
 }

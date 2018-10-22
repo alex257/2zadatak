@@ -2,7 +2,7 @@
   overflow-y: hidden;
   font-family: Montserrat, sans-serif;
   background-color: $blog-bg;
-  &__container--second {
+  &__container {
     padding-top: 412px;
   }
 
@@ -42,7 +42,7 @@
     height: 295px;
     background-color: $white;
     text-align: center;
-    transition: left .5s ease-in-out;
+    transition: left 0.5s ease-in-out;
     &:hover {
       .gallery__long-arrow {
         left: 15px;
