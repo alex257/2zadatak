@@ -13,7 +13,7 @@
     margin-bottom: 17px;
   }
 
-  p {
+  h6 {
     font-size: 15.5px;
     font-weight: $font-semibold;
     color: $blog-subtitle;
@@ -32,17 +32,35 @@
 }
 
 .gallery {
-  .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__container {
+    margin: 0 190px;
+    @media screen and (max-width: 1500px) {
+      margin: 0 120px;
+    }
+    @media screen and (max-width: 1400px) {
+      margin: 0 0px;
+    }
+  }
+
+  &__row {
     overflow: hidden;
-    margin: 0 10px 0 10px;
+    @include mQ($md) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__img--text {
-    width: 295px;
-    height: 295px;
     background-color: $white;
     text-align: center;
     transition: left 0.5s ease-in-out;
+
     &:hover {
       .gallery__long-arrow {
         left: 15px;
@@ -50,9 +68,20 @@
     }
   }
 
+  &__img--big {
+    position: relative;
+    @include mQ(1100px) {
+      display: none;
+    }
+    @include mQ($md) {
+      display: block;
+    }
+    @include mQ($sm) {
+      display: none;
+    }
+  }
+
   &__img--small {
-    width: 295px;
-    height: 295px;
     position: relative;
   }
 
@@ -110,12 +139,6 @@
     }
   }
 
-  &__img--big {
-    width: 590px;
-    height: 590px;
-    position: relative;
-  }
-
   &__img--gray-overlay {
     transition: background-color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     &:after {
@@ -145,12 +168,18 @@
     font-size: 17px;
     color: $black;
     letter-spacing: -1px;
-    margin-top: 124px;
-    margin-bottom: 27px;
+    padding-top: 103px;
   }
 
   &__icon-wrapper {
+    padding: 0 136px 0 128px;
     margin: 0 auto;
+    @include mQ(1100px) {
+      padding: 0 96px 0 89px;
+    }
+    @include mQ($md) {
+      padding: 0 136px 0 128px;
+    }
   }
   &__long-arrow {
     margin: 30px auto 0 auto;

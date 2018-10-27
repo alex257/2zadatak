@@ -11,25 +11,25 @@
     display: block;
     position: absolute;
     top: 0;
-    left: 210px;
+    left: 190px;
     background: url("../../img/header-logo.png");
     height: 112px;
     width: 171px;
     @include mQ(1470px) {
-      left: 150px;
+      left: 120px;
     }
-    @include mQ(1200px) {
-      left: 70px;
+    @include mQ($lg) {
+      left: 100px;
+    }
+    @include mQ(1050px) {
+      left: 60px;
     }
     @include mQ($md) {
       left: 0px;
     }
-    @include mQ($sm) {
-      background: url("../../img/header-logo1.png");
-      left: 0px;
-      width: 120px;
-      height: 112px;
-    }
+    //@include mQ($sm) {
+    //left: 0px;
+    //}
   }
 
   li {
@@ -54,12 +54,9 @@
     }
     div {
       &:nth-child(2) {
-        padding-left: 20px;
+        //padding-left: 20px;
         @include mQ(1470px) {
           padding-left: 40px;
-        }
-        @include mQ(1270px) {
-          padding-left: 60px;
         }
         @include mQ(1200px) {
           padding-left: 20px;
@@ -74,6 +71,11 @@
           padding-left: 70px;
         }
       }
+      &:nth-child(3) {
+        @include mQ($md) {
+          padding-right: 15px;
+        }
+      }
     }
     .active {
       color: $white;
@@ -82,35 +84,55 @@
     i {
       color: $accent;
       margin-left: 5px;
+      @include mQ($sm) {
+        //margin-right: 15px;
+        //margin-left: -11px;
+      }
     }
   }
-
   &__nav {
     height: 69px;
     overflow: hidden;
     div {
       &:nth-child(2) {
-        padding-left: 20px;
-        @include mQ(1400px) {
+        //padding-left: 20px;
+        @include mQ(1470px) {
           padding-left: 40px;
         }
-        @include mQ(1270px) {
-          padding-left: 60px;
-        }
-        @include mQ(1200px) {
+        @include mQ($lg) {
           padding-left: 20px;
         }
         @include mQ(1000px) {
           padding-left: 40px;
         }
       }
+      &:nth-child(4) {
+        @include mQ(750px) {
+          right: -5px;
+        }
+      }
+      &:nth-child(5) {
+        @include mQ(750px) {
+          right: -5px;
+        }
+        @include mQ($sm) {
+          right: -35px;
+        }
+      }
     }
     ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       li {
         font-family: "Montserrat", sans-serif;
         font-size: 14px;
         font-weight: $font-bold;
-        padding: 26px 55px 26px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-right: 55px;
 
         @include mQ(1470px) {
           font-size: 13px;
@@ -119,22 +141,25 @@
 
         @include mQ(1270px) {
           font-size: 12px;
-          //padding-right: 15px;
+          padding-right: 15px;
         }
 
         @include mQ(1000px) {
-          //font-size: 11px;
+          font-size: 11px;
           padding-right: 12px;
         }
 
         &:last-of-type {
           padding-right: 30px;
+          @include mQ($sm) {
+            padding-right: 0px;
+          }
         }
       }
       .li__search-icon {
         padding-right: 40px;
-        @include mQ($sm) {
-          padding-right: 0px;
+        @include mQ($lg) {
+          padding-right: 10px;
         }
       }
       a {
@@ -142,8 +167,10 @@
       }
       i {
         font-size: 20px;
-        @include mQ(1470px) {
-          font-size: 16px;
+        &:not(:last-of-type) {
+          @include mQ(1470px) {
+            font-size: 16px;
+          }
         }
       }
 
@@ -151,9 +178,15 @@
         position: relative;
         display: flex;
         color: $shopping-icon;
-        @include mQ($sm) {
-          left: 30px;
+        @include mQ(1470px) {
+          right: -4px;
         }
+        @include mQ($md) {
+          padding-left: 30px;
+        }
+        //@include mQ(700px) {
+        //padding-left: 20px
+        //}
         &:after {
           content: "3";
           display: block;
@@ -170,15 +203,11 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          @include mQ(1470px) {
-            width: 17px;
-            height: 17px;
-            right: -14px;
-          }
         }
       }
     }
   }
+
   &__hamburger {
     width: 40px;
     height: 40px;
@@ -187,12 +216,14 @@
     align-items: center;
     cursor: pointer;
     position: relative;
-    right: 0;
-    top: 20%;
-    @include mQ($sm) {
-      left: 28px;
-    }
-
+    right: -30px;
+    //top: 20%;
+    //@include mQ(700px) {
+    //right: -25px;
+    //}
+    //@include mQ($sm) {
+    //right: -40px;
+    //}
     span,
     span:before,
     span:after {

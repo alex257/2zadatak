@@ -26,9 +26,6 @@ body {
   @include mQ($md) {
     margin: 0 0px;
   }
-  @include mQ($xs) {
-    margin: 0 0px;
-  }
 }
 
 ul {
@@ -48,9 +45,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  //max-width: 100%;
   display: block;
   height: auto;
 }
-
-

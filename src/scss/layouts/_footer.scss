@@ -58,14 +58,12 @@
   }
 
   &__logo {
-    padding: 68px 0px 54px 42px;
+    padding: 68px 0px 54px 20px;
     width: 100%;
     display: inline-block;
-    //height: auto;
     @include mQ($lg) {
       padding-top: 0;
       padding-bottom: 0;
-      margin-left: 20px;
     }
   }
 
@@ -91,10 +89,8 @@
   }
 
   &__social-links{
-    margin-left: 30px;
-    @include mQ($lg) {
-      margin-left: 50px;
-    }
+    padding-left: 7px;
+
   }
 
   &__copyright{
@@ -128,16 +124,12 @@
     }
 
     ul {
-      padding: 120px 0 110px 0;
-      //font-weight: 600;
-      @include mQ($lg) {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
       li {
         font-weight: 600;
         a {
-          display: block;
+          display: inline-block;
+          padding: 0;
+          margin: 0;
           color: $white;
           position: relative;
           transition: background-color 0.5s;
@@ -157,20 +149,20 @@
       }
     }
     .ul--first {
-      padding: 120px 0 110px 0;
+      padding: 120px 32px 110px 0;
+    
       @include mQ($lg) {
         padding-top: 80px;
         padding-bottom: 25px;
+        margin-left: 35px;
       }
     }
     .ul--second {
-      padding: 120px 65px 110px 0;
-      margin-right: -10px;
+      padding: 120px 32px 110px 64px;
       @include mQ($lg) {
         padding-top: 0px;
         padding-bottom: 40px;
-        //padding-left: 0;
-        margin-left: 20px;
+        margin-left: -40px;
       }
     }
 

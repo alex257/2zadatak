@@ -2,9 +2,9 @@
   @media (min-width: $breakpoint) {
     @for $i from 1 through $columns {
       .col-#{$size}-#{$i} {
-        width: (100% / $columns) * $i;
+        flex: 0 0 (100% / $columns) * $i;
       }
-      .col-offset-#{$i} {
+      .col-#{$size}-offset-#{$i} {
         margin-left: (100% / $columns) * $i;
       }
     }

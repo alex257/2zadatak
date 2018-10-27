@@ -1,11 +1,16 @@
 [class*="col-"] {
-  float: left;
-  padding-right: $spacing;
-
-  &:not(:last-of-type) {
-    padding-right: $spacing;
+  &:first-of-type{
+     //margin-left: 10px;
+    //margin-left: 2.44%;
   }
+  &:last-of-type{
+    //margin-right: 2.44%;
+    //margin-right: 2.44%;
+  }
+  
+
 }
 .row {
-  overflow: auto;
+  display: flex;
+  //flex-wrap: wrap,
 }
