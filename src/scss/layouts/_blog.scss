@@ -2,9 +2,6 @@
   overflow-y: hidden;
   font-family: Montserrat, sans-serif;
   background-color: $blog-bg;
-  &__container {
-    padding-top: 412px;
-  }
 
   h2 {
     font-size: 40px;
@@ -39,17 +36,17 @@
 
   &__container {
     margin: 0 190px;
-    @media screen and (max-width: 1500px) {
+    @include mQ(1500px) {
       margin: 0 120px;
     }
-    @media screen and (max-width: 1400px) {
+    @include mQ(1400px) {
       margin: 0 0px;
     }
   }
 
   &__row {
     overflow: hidden;
-    @include mQ($md) {
+    @include mQ($lg) {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
@@ -60,6 +57,11 @@
     background-color: $white;
     text-align: center;
     transition: left 0.5s ease-in-out;
+    &:nth-child(even) {
+      @include mQ($sm) {
+        display: none;
+      }
+    }
 
     &:hover {
       .gallery__long-arrow {
@@ -83,6 +85,11 @@
 
   &__img--small {
     position: relative;
+    @include mQ($sm) {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
   }
 
   &__img--small,
@@ -102,6 +109,9 @@
     &:hover:after {
       background-color: rgba($overlay-red, 0.1);
       display: block;
+      @include mQ($sm) {
+        display: none;
+      }
     }
   }
 
@@ -172,13 +182,13 @@
   }
 
   &__icon-wrapper {
-    padding: 0 136px 0 128px;
+    padding: 0 132px;
     margin: 0 auto;
     @include mQ(1100px) {
-      padding: 0 96px 0 89px;
+      padding: 0 96px;
     }
     @include mQ($md) {
-      padding: 0 136px 0 128px;
+      padding: 0 132px;
     }
   }
   &__long-arrow {

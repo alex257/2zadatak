@@ -88,14 +88,12 @@
     }
   }
 
-  &__social-links{
+  &__social-links {
     padding-left: 7px;
-
   }
 
-  &__copyright{
+  &__copyright {
     font-size: 10px;
-
   }
 
   &__links {
@@ -150,7 +148,7 @@
     }
     .ul--first {
       padding: 120px 32px 110px 0;
-    
+
       @include mQ($lg) {
         padding-top: 80px;
         padding-bottom: 25px;

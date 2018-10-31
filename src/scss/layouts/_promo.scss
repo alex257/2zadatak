@@ -1,33 +1,52 @@
 .promo {
   background-color: $blog-bg;
   font-family: Montserrat, sans-serif;
+  padding-bottom: 400px;
   margin: 0 auto;
-  overflow-y: hidden;
-  //position: relative;
-  //width: 100%;
-  //height: 600px;
-  //z-index: 1;
+  position: relative;
+  @include mQ($lg) {
+    padding-bottom: 334px;
+  }
+  @include mQ(930px) {
+    padding-bottom: 794px;
+  }
+  @include mQ(600px) {
+    padding-bottom: 637px;
+  }
 
-  //&__row {
-    /*margin: 0 11px;
-    justify-content: center;
-    align-items: center;*/
-  //}
+  &__container {
+    margin: 0 190px;
+    @include mQ(1500px) {
+      margin: 0 120px;
+    }
+    @include mQ(1400px) {
+      margin: 0px;
+    }
+  }
+
+  &__row {
+    @include mQ(930px) {
+      flex-wrap: wrap;
+    }
+  }
 
   &__card {
-    //width: 1180px;
-    //height: 400px;
-    //top: -40px;
-    //bottom: -475px;
-    //position: absolute;
-    //z-index: 5;
-    @include mQ($md) {
-      //max-width: 90%;
-      //margin: 0 auto;
+    position: absolute;
+    top: 38.1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //top: 155px;
+    z-index: 5;
+    @include mQ($lg) {
+      top: 35.2%;
+      margin: 0 auto;
     }
-    @include mQ($sm) {
-      overflow: auto;
+    @include mQ(930px) {
+      top: 43.6%;
       flex-direction: column;
+    }
+    @include mQ(600px) {
+      top: 42.1%;
     }
   }
 
@@ -63,32 +82,67 @@
 
   &__img--first {
     background: url(../../img/promo1.jpg) no-repeat;
-    width: 100%;
+    @include mQ($lg) {
+      background: url(../../img/promo1a.jpg) no-repeat;
+    }
+    @include mQ(930px) {
+      background: url(../../img/promo1.jpg) no-repeat;
+    }
+    @include mQ(600px) {
+      background: url(../../img/promo1a.jpg) no-repeat;
+    }
   }
 
   &__img--second {
     background: url(../../img/promo2.jpg) no-repeat;
-    width: 100%;
+
+    @include mQ($lg) {
+      background: url(../../img/promo2a.jpg) no-repeat;
+    }
+    @include mQ(930px) {
+      background: url(../../img/promo2.jpg) no-repeat;
+    }
+    @include mQ(600px) {
+      background: url(../../img/promo2a.jpg) no-repeat;
+    }
   }
 
   &__img--first,
   &__img--second {
     position: relative;
-    //display: block;
-    //height: auto;
-    //max-width: 100%;
-    @include mQ($md) {
-      //width: 600px;
-      //height: auto;
+    display: block;
+    width: 590px;
+    @include mQ($lg) {
+      width: 450px;
+    }
+    @include mQ(930px) {
+      width: 590px;
+    }
+    @include mQ(600px) {
+      width: 450px;
     }
   }
 
   &__border-wrapper {
     width: 510px;
-    height: 265px;
+    //width: 86.5%;
+    height: 262px;
+    //height: 145%;
     margin: 50px 0px 0px 38px;
     outline: 6px solid $white;
     position: relative;
+    @include mQ($lg) {
+      width: 380px;
+      height: 183px;
+    }
+    @include mQ(930px) {
+      width: 510px;
+      height: 262px;
+    }
+    @include mQ(600px) {
+      width: 380px;
+      height: 183px;
+    }
   }
 
   &__h1--first,
@@ -103,10 +157,28 @@
     letter-spacing: -1px;
     line-height: 105%;
     padding-bottom: 10px;
+    @include mQ($lg) {
+      font-size: 34px;
+    }
+    @include mQ(930px) {
+      font-size: 44px;
+    }
+    @include mQ(600px) {
+      font-size: 34px;
+    }
   }
 
   &__h1--first-2 {
     top: 56px;
+    @include mQ($lg) {
+      top: 46px;
+    }
+    @include mQ(930px) {
+      top: 56px;
+    }
+    @include mQ(600px) {
+      top: 46px;
+    }
   }
 
   &__h1--first {
@@ -151,15 +223,6 @@
     width: 252px;
     height: 182px;
     padding-left: 38px;
-  }
-
-  &__h1--first,
-  &__h1--second {
-    color: $white;
-    position: relative;
-    font-size: 44px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    line-height: 105%;
+  
   }*/
 }
