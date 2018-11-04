@@ -3,7 +3,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  max-width: 1600px;
   height: auto;
 
   &:before {
@@ -27,9 +26,6 @@
     @include mQ($md) {
       left: 0px;
     }
-    //@include mQ($sm) {
-    //left: 0px;
-    //}
   }
 
   li {
@@ -132,16 +128,16 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding-right: 55px;
+        //padding-right: 55px;
 
         @include mQ(1470px) {
           font-size: 13px;
-          padding-right: 30px;
+          //padding-right: 30px;
         }
 
         @include mQ(1270px) {
           font-size: 12px;
-          padding-right: 15px;
+          //padding-right: 15px;
         }
 
         @include mQ(1000px) {
@@ -149,15 +145,15 @@
           padding-right: 12px;
         }
 
-        &:last-of-type {
+        /*&:last-of-type {
           padding-right: 30px;
           @include mQ($sm) {
             padding-right: 0px;
           }
-        }
+        }*/
       }
       .li__search-icon {
-        padding-right: 40px;
+        padding-right: 43px;
         @include mQ($lg) {
           padding-right: 10px;
         }
@@ -175,8 +171,8 @@
       }
 
       i.fa-shopping-cart {
-        position: relative;
-        display: flex;
+        //display: flex;
+        padding-right: 0px;
         color: $shopping-icon;
         @include mQ(1470px) {
           right: -4px;
@@ -184,29 +180,22 @@
         @include mQ($md) {
           padding-left: 30px;
         }
-        //@include mQ(700px) {
-        //padding-left: 20px
-        //}
-        &:after {
-          content: "3";
-          display: block;
-          position: absolute;
-          top: -10px;
-          right: -18px;
-          width: 20px;
-          height: 20px;
+      }
+
+      .number-of-items{ 
+          padding: 5px 7px;
           background-color: $accent;
           border-radius: 50%;
           color: $white;
           font-family: "Open Sans", sans-serif;
           font-size: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          margin-top: -20px;
+          margin-right: 10px;
+          margin-left: -15px;
         }
       }
     }
-  }
+  
 
   &__hamburger {
     width: 40px;
@@ -246,7 +235,7 @@
   &__search {
     background: $white;
     display: none;
-    max-width: 1600px;
+    //max-width: 1600px;
     height: 560px;
     margin-top: -88px;
     h1 {

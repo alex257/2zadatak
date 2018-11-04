@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans|Montserrat:400,600,700,800|Open+Sans");
 
-@import "vendors/normalize";
-@include normalize();
+@import "normalize/normalize/import-now";
 
 @import "abstracts/variables";
-@import "abstracts/mixins";
+@import "abstracts/media-queries";
+@import "abstracts/grid";
 @import "base/base";
 @import "base/fonts";
 @import "base/typography";

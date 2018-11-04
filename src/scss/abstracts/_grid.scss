@@ -14,9 +14,3 @@
 @include grid("sm", $sm);
 @include grid("md", $md);
 @include grid("lg", $lg);
-
-@mixin mQ($width) {
-  @media only screen and (max-width: $width) {
-    @content;
-  }
-}
