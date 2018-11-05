@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   position: relative;
   height: auto;
+  z-index: 1;
 
   &:before {
     content: "";
@@ -116,126 +117,182 @@
         }
       }
     }
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      li {
-        font-family: "Montserrat", sans-serif;
-        font-size: 14px;
-        font-weight: $font-bold;
+    nav {
+      ul {
         display: flex;
-        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        //padding-right: 55px;
+        justify-content: flex-start;
+        li {
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          font-weight: $font-bold;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding-right: 55px;
 
-        @include mQ(1470px) {
-          font-size: 13px;
-          //padding-right: 30px;
-        }
-
-        @include mQ(1270px) {
-          font-size: 12px;
-          //padding-right: 15px;
-        }
-
-        @include mQ(1000px) {
-          font-size: 11px;
-          padding-right: 12px;
-        }
-
-        /*&:last-of-type {
-          padding-right: 30px;
-          @include mQ($sm) {
-            padding-right: 0px;
-          }
-        }*/
-      }
-      .li__search-icon {
-        padding-right: 43px;
-        @include mQ($lg) {
-          padding-right: 10px;
-        }
-      }
-      a {
-        color: $black;
-      }
-      i {
-        font-size: 20px;
-        &:not(:last-of-type) {
           @include mQ(1470px) {
-            font-size: 16px;
+            font-size: 13px;
+            padding-right: 30px;
+          }
+
+          @include mQ(1270px) {
+            font-size: 12px;
+            padding-right: 15px;
+          }
+
+          @include mQ(1000px) {
+            font-size: 11px;
+            padding-right: 12px;
           }
         }
       }
+    }
 
-      i.fa-shopping-cart {
-        //display: flex;
-        padding-right: 0px;
-        color: $shopping-icon;
+    .li__search-icon {
+      padding-right: 43px;
+      @include mQ($lg) {
+        padding-right: 10px;
+      }
+    }
+    a {
+      color: $black;
+    }
+    i {
+      font-size: 20px;
+      &:not(:last-of-type) {
         @include mQ(1470px) {
-          right: -4px;
-        }
-        @include mQ($md) {
-          padding-left: 30px;
-        }
-      }
-
-      .number-of-items{ 
-          padding: 5px 7px;
-          background-color: $accent;
-          border-radius: 50%;
-          color: $white;
-          font-family: "Open Sans", sans-serif;
-          font-size: 10px;
-          margin-top: -20px;
-          margin-right: 10px;
-          margin-left: -15px;
+          font-size: 16px;
         }
       }
     }
-  
 
-  &__hamburger {
-    width: 40px;
-    height: 40px;
-    background-color: $white;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    right: -30px;
-    //top: 20%;
-    //@include mQ(700px) {
-    //right: -25px;
-    //}
-    //@include mQ($sm) {
-    //right: -40px;
-    //}
-    span,
-    span:before,
-    span:after {
-      content: "";
-      display: block;
-      margin: 0 auto;
-      height: 3px;
-      width: 19px;
-      background: $black;
+    i.fa-shopping-cart {
+      margin-right: -13px;
+      color: $shopping-icon;
+      @include mQ($md) {
+        padding-left: 30px;
+      }
+    }
+
+    .number-of-items {
+      padding: 5px 7px;
+      background-color: $accent;
+      border-radius: 50%;
+      color: $white;
+      font-family: "Open Sans", sans-serif;
+      font-size: 10px;
+      margin-top: -20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__mobile-navigation {
+    #hamburger {
+      width: 40px;
+      height: 40px;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      right: -20px;
+      top: 10px;
+      z-index: 1;
+      user-select: none;
+      @include mQ(800px) {
+        right: -5px;
+      }
+      span {
+        display: block;
+        width: 22px;
+        height: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: $black;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 1px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+          background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+          opacity 0.55s ease;
+
+        &:first-child {
+          transform-origin: 0% 0%;
+        }
+
+        &:nth-child(2) {
+          transform-origin: 0% 100%;
+        }
+      }
+
+      input {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+
+        &:checked ~ span {
+          opacity: 1;
+          transform: rotate(45deg) translate(-2px, -1px);
+          background-color: $shopping-icon;
+        }
+
+        &:checked ~ span:nth-child(3) {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        &:checked ~ span:nth-last-child(2) {
+          transform: rotate(-45deg) translate(0, -1px);
+        }
+        &:checked ~ ul {
+          //transform: none;
+          display: block;
+          position: absolute;
+          z-index: 31;
+        }
+      }
+    }
+
+    #menu {
+      display: none;
       position: absolute;
-    }
-    span:before {
-      top: 7px;
-    }
-    span:after {
-      bottom: 7px;
+      top: 140px;
+      width: 300px;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+      background: $white;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      transform-origin: 0% 0%;
+      transform: translate(0, 200%);
+      transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+      @include mQ($md) {
+        display: block;
+        position: absolute;
+        z-index: 33;
+      }
+
+      li {
+        padding: 10px 0;
+        font-size: 22px;
+      }
     }
   }
 
   &__search {
     background: $white;
     display: none;
-    //max-width: 1600px;
     height: 560px;
     margin-top: -88px;
     h1 {
