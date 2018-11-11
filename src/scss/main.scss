@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans|Montserrat:400,600,700,800|Open+Sans");
 
-@import "normalize/import-now";
+@import "node_modules/normalize.scss/normalize.scss";
 
 @import "abstracts/variables";
 @import "abstracts/media-queries";
