@@ -60,6 +60,6 @@ exports.copyImages = copyImages;
 exports.watch = watch;
 exports.default = build;
 
-var build = gulp.parallel(style, copyHtml, js, watch);
+var build = gulp.parallel(style, copyHtml, copyImages, js, watch);
 gulp.task(build);
 gulp.task("default", build);
