@@ -2,7 +2,9 @@ const gulp = require("gulp"),
   sass = require("gulp-sass"),
   browserSync = require("browser-sync").create(),
   autoprefixer = require("gulp-autoprefixer"),
-  gulpCopy = require("gulp-copy");
+  gulpCopy = require("gulp-copy"),
+  terser = require("gulp-terser"),
+  sourcemaps = require("gulp-sourcemaps");
 
 function style() {
   
@@ -38,8 +40,12 @@ function copyImages() {
 function js() {
   return gulp
     .src("src/js/*.js")
+    .pipe(sourcemaps.init())
+    .pipe(terser())
+    .pipe(sourcemaps.write())
     .pipe(browserSync.stream())
     .pipe(gulp.dest("dist/js/"));
+    
 }
 
 function watch() {
@@ -51,12 +57,14 @@ function watch() {
   gulp.watch("src/*.html", copyHtml);
   gulp.watch("src/*.html").on("change", browserSync.reload);
   gulp.watch("src/img/*.{gif,jpg,png,svg}", copyImages);
+  gulp.watch("src/js/*.js", js);
   gulp.watch("src/js/*.js").on("change", browserSync.reload);
 }
 
 exports.style = style;
 exports.copyHtml = copyHtml;
 exports.copyImages = copyImages;
+exports.js = js;
 exports.watch = watch;
 exports.default = build;
 
